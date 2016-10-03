@@ -92,6 +92,7 @@ instances:
       - System
     type:
       - Error
+      - Critical
     tags:
       - system
 
@@ -101,6 +102,19 @@ instances:
       - Audit Failure
     tags:
       - audit_failure, security
+
+  - log_file:
+      - Security
+    type:
+      - Information
+    event_id:
+      - 4740
+      - 4728
+      - 4732
+      - 4735
+      - 4756
+      - 4625
+      - 4648
 
   - log_file:
       - Application
