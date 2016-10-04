@@ -57,11 +57,6 @@ instances:
       - [AvgDiskQueueLength, system.disk.queue, gauge]
     tag_by: Name
 
-  - class: Win32_PerfFormattedData_PerfDisk_LogicalDiskProc_Process
-    metrics:
-      - [PageFaultsPersec, system.proc.page_faults, gauge]
-      - [HandleCount, system.mem.handles, gauge]
-    tag_by: Name
 
   - class: Win32_PerfFormattedData_Tcpip_TCPv4
     metrics:
