@@ -48,7 +48,7 @@ instances:
 # Disk info
   - class: Win32_PerfFormattedData_PerfDisk_LogicalDisk
     metrics:
-      - [PercentFreeSpace, system.disk.free, gauge]
+      - [PercentFreeSpace, system.disk.free.pct, gauge]
       - [PercentIdleTime, system.disk.idle, gauge]
       - [AvgDisksecPerRead, system.disk.read_sec, gauge]
       - [AvgDisksecPerWrite, system.disk.write_sec, gauge]
