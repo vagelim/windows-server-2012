@@ -7,7 +7,6 @@ instances:
       - [NumberOfProcesses, system.proc.count, gauge]
       - [NumberOfUsers, system.users.count, gauge]
 
-
 # Paging info
   - class: Win32_PerfFormattedData_PerfOS_Memory
     metrics:
@@ -24,7 +23,7 @@ instances:
     metrics:
       - [PercentUsage, system.mem.page.pct, gauge]
     tag_by: Name
-  # Fetch the number of processes and users.
+  # Fetch the number of processes
   - class: Win32_PerfFormattedData_PerfOS_System
     metrics:
       - [ProcessorQueueLength, system.proc.queue, gauge]
@@ -35,7 +34,7 @@ instances:
       - [PercentPrivilegedTime, system.cpu.priv.pct, gauge]
       - [PercentDPCTime, system.cpu.dpc.pct, gauge]
       - [PercentInterruptTime, system.cpu.interrupt.pct, gauge]
-      - [DPCsQueuedPersec, system.dpc.queue, gauge]
+      - [DPCsQueuedPersec, system.cpu.dpc.queue, gauge]
     tag_by: Name
 
 # Context switches
@@ -56,7 +55,6 @@ instances:
       - [DiskReadsPersec, system.disk.reads, gauge]
       - [AvgDiskQueueLength, system.disk.queue, gauge]
     tag_by: Name
-
 
   - class: Win32_PerfFormattedData_Tcpip_TCPv4
     metrics:
